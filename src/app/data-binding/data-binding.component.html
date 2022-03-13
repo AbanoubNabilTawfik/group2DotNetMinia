@@ -1,0 +1,45 @@
+<h1>Interpolation</h1>
+{{numberOne}}
+<br>
+{{numberOne +10*9}}
+<br>
+{{firstName}}
+<br>
+{{"Welcome " +firstName }}
+<br>
+{{firstName.length}}
+<br>
+{{firstName.toUpperCase()}}
+<br>
+<!-- {{a=10*9}} not allowed -->
+<!-- {{window.location.href}} not allowed -->
+-----------------------------------------------------------------------
+<h1>Property Binding</h1>
+
+<input type="text" id="firstId">
+<input type="text" [id]="myId">
+<input type="text" id="{{myId}}"/>
+
+<button [disabled]="isDisabled">Click me</button>
+
+<button disabled="{{isDisabled}}">Click me</button>
+<br>
+
+-----------------------------------------------------------------------
+
+<h1>Class Binding</h1>
+<h2 class="text-success">Welcome to ITI</h2>
+<h2 [class]="className">Welcome again</h2>
+<h2 [class.text-danger]="hasError==true">Minia Branch</h2>
+<h2 [ngClass]="messageClasses">Abanoub Nabil</h2>
+<br>
+-----------------------------------------------------------------------
+
+<h1>Style Binding</h1>
+
+<h2 style="color:red">Welcome to angular</h2>
+<h2 [style.color]="'red'">Welcome to angular</h2>
+
+<h3 [style.color]="hasError? 'red' : 'green' ">Welcome to angular again</h3>
+
+<h2  [ngStyle]="myStyles">Welcome again</h2>
