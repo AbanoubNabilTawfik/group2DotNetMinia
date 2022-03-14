@@ -1,0 +1,34 @@
+<p>structure-directives works!</p>
+
+<h2 *ngIf="isAppeared">
+    Hello Angular
+</h2>
+
+<div *ngIf="isLoggedIn ;then thenBlock; else elseBlock"></div>
+
+<ng-template #elseBlock>
+    <h2>
+        Hello Guest
+    </h2>
+</ng-template>
+
+
+<ng-template #thenBlock>
+    <h2>
+        Hello {{fullName}}
+    </h2>
+</ng-template>
+
+<div [ngSwitch]="carName">
+    <div *ngSwitchCase="'Tipo'">You select tipo car</div>
+    <div *ngSwitchCase="'KIA'">You select KIA car</div>
+    <div *ngSwitchCase="'LOGAN'">You select LOGAN car</div>
+    <div *ngSwitchDefault>Pick a car again</div>
+</div>
+
+<div *ngFor="let car of cars; index as i; even as e; odd as o;first as f; last as l">
+    <div *ngIf="f">
+        {{car}}-{{i}} -{{e}}-{{o}}
+
+    </div>
+</div>
